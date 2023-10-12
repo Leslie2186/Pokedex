@@ -1,19 +1,16 @@
 import PropTypes from "prop-types";
+import './PokemonCard.css';
 
 function PokemonCard(props) {
-    
-    let imagePokemon;
 
-    if(props.pokemon.imgSrc){
-      imagePokemon = <img src={props.pokemon.imgSrc}/>;
-    }else{
-        imagePokemon = <p>???</p>;
-    }
+    return <figure className="containerCard">
+            {props.pokemon.imgSrc ? <img src={props.pokemon.imgSrc} alt={props.pokemon.name}/> : <p>???</p>}
 
-    return <figure>
-        {imagePokemon}
-        <figcaption>{props.pokemon.name}</figcaption>
+        <figcaption>
+            {props.pokemon.name}
+        </figcaption>
     </figure>;
+
 }
 
 PokemonCard.propTypes = {
