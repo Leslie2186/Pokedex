@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import MyTitle from "./components/MyTitle"*/
 import { useState } from 'react';
+import { useEffect } from 'react';
 import PokemonCard from './components/PokemonCard'
 import NavBar from './components/NavBar';
 import './App.css'
@@ -88,6 +89,8 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
+
+  useEffect(() => {alert("Hello pokemon trainer :)")}, []);
 
   return (
     <div>
